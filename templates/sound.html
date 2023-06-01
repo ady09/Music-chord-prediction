@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="w3-card-4 w3-margin">
+
+    <header class="w3-container w3-blue">
+      <h1>Upload The Chords as an audio file</h1>
+    </header>
+
+
+    <form class="w3-container w3-margin" action="" method="post" enctype="multipart/form-data">
+
+      
+      <input class="w3-btn w3-blue-grey" type="file" name="dataset" />
+     
+
+        <input class="w3-btn w3-blue-grey" name="sub" type="submit" value="Upload"/>
+        <input class="w3-btn w3-blue-grey" name="sub" type="submit" value="Test">
+        <br><br>
+        <input class="w3-btn w3-blue-grey" name="sub" type="submit" value="Show Info">
+   
+       
+    </form>
+    {% if mgs %}
+    <p class="error"><strong>Info:</strong> {{ mgs }}
+  {% endif %}
+    <br>
+    <footer class="w3-container w3-blue">
+      <h5></h5>
+    </footer>
+    
+    </div>
+
+    <div class="w3-card-4 w3-margin">
+
+      <header class="w3-container w3-blue">
+        <h1>Predicted Chord</h1>
+      </header>
+      
+      <div class="w3-container">
+        <p>{{ result }}
+      </p>
+      </div>
+      
+      <footer class="w3-container w3-blue">
+        <h5></h5>
+      </footer>
+  </div>
+
+
+    
+
+    {% endblock %}
